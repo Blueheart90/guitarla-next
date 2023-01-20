@@ -41,6 +41,7 @@
   }
   .header .navegacion img {
     width: 3rem;
+    height: auto;
   }
   
   .header .navegacion a:hover, .header .active {

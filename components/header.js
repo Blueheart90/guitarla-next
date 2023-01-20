@@ -9,13 +9,16 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={`contenedor ${styles.barra}`}>
-        <Image
-          className="logo"
-          src="/img/logo.svg"
-          alt="Logo GuitarLA"
-          width={300}
-          height={40}
-        />
+        <Link href="/">
+          <Image
+            className="logo"
+            src="/img/logo.svg"
+            alt="Logo GuitarLA"
+            width={300}
+            height={40}
+            priority
+          />
+        </Link>
         <nav className={styles.navegacion}>
           <Link
             className={router.pathname === '/' ? styles.active : ''}
@@ -30,16 +33,16 @@ function Header() {
             Nosotros
           </Link>
           <Link
-            className={router.pathname === '/blog' ? styles.active : ''}
-            href="/blog"
-          >
-            Blog
-          </Link>
-          <Link
             className={router.pathname === '/tienda' ? styles.active : ''}
             href="/tienda"
           >
             Tienda
+          </Link>
+          <Link
+            className={router.pathname === '/blog' ? styles.active : ''}
+            href="/blog"
+          >
+            Blog
           </Link>
         </nav>
       </div>
