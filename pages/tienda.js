@@ -16,7 +16,7 @@ import styles from '@/styles/grid.module.css';
 export async function getServerSideProps() {
   const response = await fetch(`${process.env.API_URL}/guitars?populate=image`);
   const { data: guitars } = await response.json();
-  console.log(guitars);
+
   return {
     props: { guitars },
   };
