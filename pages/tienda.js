@@ -12,7 +12,7 @@ import styles from '@/styles/grid.module.css';
 //   };
 // }
 
-// Consumir API de forma dinamica. Cada vez estará realizando las concultas
+// Consumir API de forma dinamica. Cada vez estará realizando las consultas
 export async function getServerSideProps() {
   const response = await fetch(`${process.env.API_URL}/guitars?populate=image`);
   const { data: guitars } = await response.json();
